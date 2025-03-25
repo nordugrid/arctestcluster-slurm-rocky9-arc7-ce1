@@ -93,6 +93,8 @@ git push -u origin mynewtestbranch
 
 ## Replacing arc.conf or slurm configuration
 
+(Contact Maiken if you want to replace slurm.conf - not enabled currently.)
+
 Whenever the arc.conf or the slurm config files in the main branch changes via a merge request, the new arc.conf/slurm config files are pulled onto arctestcluster-slurm-ce1, and replaced with the old ones. ARC/slurm is restarted with the new configuration. 
 
 You need to label your merge-requests according to what files you have changed. Only the files corresponding to the labels chosen will be updated upon the merge. 
@@ -104,12 +106,16 @@ The replacement will fail for instance if the arc.conf validation failed e.g. if
 
 
 ## Install an auth plugin or mapping plugin
+(Contact Maiken if you want to test this feature - not enabled currently.)
+
 To install a new auth plugin on the server, two steps are needed
 1. Create the auth plugin script in ./arcplugins folder in git
 2. Update the arc.conf file to use the auth plugin 
 
 
 ### 1. Install plugin
+(Contact Maiken if you want to test this feature - not enabled currently.)
+
 Assuming you have cloned the repo, and created your dev-branch
 
 1. Create the plugin script in the arcplugins folder
@@ -118,6 +124,7 @@ Assuming you have cloned the repo, and created your dev-branch
 4. Label the MR/PR with arc:install_plugin
 
 ### 2. Configure ARC to use the plugin
+(Contact Maiken if you want to test this feature - not enabled currently.)
 
 1. Create a dev-branch
 2. Update arc.conf to use the plugin:
